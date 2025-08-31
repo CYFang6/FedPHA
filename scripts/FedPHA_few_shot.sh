@@ -8,7 +8,6 @@ SHOTS=2                 # number of shots per class
 BACKBONE="rn50"         # backbone model: rn50 | vit_b16 | ...
 USERS=10                # number of federated clients
 SEED=1                  # random seed
-OUTPUT_DIR="output/${DATASET}/${TRAINER}/shots_${SHOTS}/seed_${SEED}"
 
 python federated_main.py \
   --trainer ${TRAINER} \
@@ -17,4 +16,3 @@ python federated_main.py \
   --backbone ${BACKBONE} \
   --num_users ${USERS} \
   --seed ${SEED} \
-  --output_dir ${OUTPUT_DIR}
