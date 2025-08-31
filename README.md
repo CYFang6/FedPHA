@@ -1,6 +1,6 @@
 # FedPHA: Federated Prompt Learning for Heterogeneous Client Adaptation [ICML 2025]
 The implementation of paper **FedPHA: Federated Prompt Learning for Heterogeneous Client Adaptation (ICML 2025)**.[[paper]](https://openreview.net/forum?id=y7pDvbi9xz)
-![FedOTP-pipeline](FedOTP-pipeline.png "FedOTP-pipeline")
+![FedOTP-pipeline](FedPHA-pipeline.png "FedOTP-pipeline")
 
 ## Requirements
 - Python 3.8+
@@ -12,7 +12,7 @@ pip install -r requirements.txt
 ```
 
 ## Data Preparation
-Please follow the instructions at [dataset.md](dataset.md) to prepare the following datasets: Caltech101, OxfordPets, Flowers102, Food101, DTD.
+Please follow the instructions at [CoOP](https://github.com/KaiyangZhou/CoOp/blob/main/DATASETS.md) to prepare the following datasets: Caltech101, OxfordPets, Flowers102, Food101, DTD.
 
 For CIFAR10 and CIFAR100 datasets, please download and unzip data under `DATA/` file catalog. Or simply run experiments with CIFAR10/CIFAR100 dataset, the program will download data automatically.
 
@@ -28,7 +28,7 @@ You can run `federated_main.py` with some specified arguments.
 
 `--config-file` means which config file to use, such as `rn50` or `vit_b16`.
 
-You can select variables like shots, clients by changing `cfg` or you can change every arguments you like in `fedotp_few_shot.sh`.
+You can select variables like shots, clients by changing `cfg` or you can change every arguments you like in `FedPHA_few_shot.sh`.
 
 ### For example
 If you want to use FedOTP to train caltech101 dataset with 2 shots, backbone rn50 and total independent non-iid setting.
@@ -41,7 +41,7 @@ SHOTS=2
 USEALL=False
 IID=False
 ```
-and run `bash scripts/best_prompts_list.sh`
+and run `bash scripts/FedPHA_few_shot.sh`
 
 After the experiments, all the results are finished and save to `output/`.
 
