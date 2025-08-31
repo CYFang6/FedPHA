@@ -46,6 +46,14 @@ and run `bash scripts/FedPHA_few_shot.sh`
 
 After the experiments, all the results are finished and save to `output/`.
 
+### Heterogeneous Scenario Experiments
+We further provide a script to evaluate FedPHA under heterogeneous prompt-length settings across clients.  
+The script `scripts/best_prompts_list.sh` automatically sweeps different prompt length combinations (e.g., [4, 8, 12, …, 32]) for multiple domains, dispatches tasks across GPUs, and saves results into `output/`.  
+Run it with:
+```bash
+bash scripts/FedPHA_HE_promptFedPHA_HE_prompt.sh
+
+
 ## Citation
 If you find our work useful in your research, please consider citing:
 ```
