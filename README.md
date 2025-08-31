@@ -1,7 +1,7 @@
 # FedPHA: Federated Prompt Learning for Heterogeneous Client Adaptation [ICML 2025]
 The implementation of paper **FedPHA: Federated Prompt Learning for Heterogeneous Client Adaptation (ICML 2025)**.
 [[paper]](https://openreview.net/forum?id=y7pDvbi9xz)
-![FedPHA-pipeline](FedPHA-pipeline.png "FedPHA-pipeline")
+![FedPHA-pipeline](FedPHA-pipeline.jpg "FedPHA-pipeline")
 
 ## Requirements
 - Python 3.8+
