@@ -119,15 +119,6 @@ def extend_cfg(cfg, args):
     cfg.TRAINER.FEDPGP.mu = 1
     cfg.TRAINER.FEDPGP.temp = 0.5
 
-    # current_trainer_cfg = cfg['TRAINER'][args.trainer]
-    # cfg['TRAINER'] = CN()
-    # cfg['TRAINER'][args.trainer] = current_trainer_cfg
-    
-    # current_trainer_cfg = cfg['TRAINER'][args.trainer]
-    
-    # cfg['TRAINER'] = CN(cfg['TRAINER'])
-    # cfg['TRAINER'][args.trainer] = current_trainer_cfg
-
     cfg.DATASET.SUBSAMPLE_CLASSES = "all"  # all, base or new
     cfg.DATASET.USERS = args.num_users  # number of clients
     cfg.DATASET.NAME = args.dataset
@@ -171,7 +162,7 @@ def setup_cfg(args):
             random.randint(4, 32) for _ in range(cfg.DATASET.USERS)
         ]
 
-    # 数据集逻辑
+    # datasets
     if cfg.DATASET.NAME in ["cifar10", "cifar100"]:
         cfg.DATASET.USER_PROMPT_LENGTHS = [
             random.randint(4, 32) for _ in range(cfg.DATASET.USERS)
@@ -249,7 +240,7 @@ def main(args):
     for epoch in range(start_epoch, end_epoch):
 
         if args.trainer == 'CLIP':
-            print("------------Global test start (不训练) -------------")
+            print("------------Global test start without training -------------")
             results = []
 
             idxs_users = list(range(cfg.DATASET.USERS))
