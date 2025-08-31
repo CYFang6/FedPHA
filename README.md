@@ -32,7 +32,7 @@ You can run `federated_main.py` with some specified arguments.
 You can select variables like shots, clients by changing `cfg` or you can change every arguments you like in `FedPHA_few_shot.sh`.
 
 ### For example
-If you want to use FedOTP to train caltech101 dataset with 2 shots, backbone rn50 and total independent non-iid setting.
+If you want to use FedPHA to train caltech101 dataset with 2 shots, backbone rn50 and total independent non-iid setting.
 You can specify that:
 ```
 MODEL=GL_SVDMSE
