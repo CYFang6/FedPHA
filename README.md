@@ -35,8 +35,7 @@ You can select variables like shots, clients by changing `cfg` or you can change
 If you want to use FedPHA to train caltech101 dataset with 2 shots, backbone rn50 and total independent non-iid setting.
 You can specify that:
 ```
-MODEL=GL_SVDMSE
-TRAINER=GLP_OT
+TRAINER=GL_SVDMSE
 DATA=caltech101
 SHOTS=2
 USEALL=False
